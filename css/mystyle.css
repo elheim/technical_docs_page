@@ -121,24 +121,44 @@ code {
 }
 
 /* Media Queries */
-@media(max-width:700px){
-  nav{
-    width:100%;
-    height: auto;
-    position: relative;
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  #navbar ul {
+    border: 1px solid;
+    height: 207px;
   }
 
-  nav a{
-    float:left;
+  #navbar {
+    background-color: white;
+    position: absolute;
+    top: 0;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    max-height: 275px;
+    border: none;
+    z-index: 1;
+    border-bottom: 2px solid;
   }
-  main{
-    margin-left:0;
+
+  #main-doc {
+    position: relative;
+    margin-left: 0px;
+    margin-top: 270px;
   }
 }
 
-@media(max-width:400px){
-  nav a{
-    text-align: center;
-    float: none;
+@media only screen and (max-width: 400px) {
+  #main-doc {
+    margin-left: -10px;
+  }
+
+  code {
+    margin-left: -20px;
+    width: 100%;
+    padding: 15px;
+    padding-left: 10px;
+    padding-right: 45px;
+    min-width: 233px;
   }
 }
