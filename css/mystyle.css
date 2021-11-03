@@ -1,16 +1,19 @@
 /* Global */
 body{
-  font:15px/1.5 Arial, Helvetica, sans-serif;
+  min-width: 290px;
+  color: #4d4e53;
+  font:15px/1.5 'Open Sans', Arial, sans-serif;
   margin:0;
   padding:0;
-  position: relative;
+  background: #ffffff;
 }
 
-/* main{
-    padding-left: 300px;
-} */
+h1{
+  color:black;
+}
 
 h2{
+  color: black;
   font-size: 2em;
   font-weight: 100;
 }
@@ -29,23 +32,24 @@ ol{
 }
 
 .container{
-  width:60%;
+  width:800px;
   margin:auto;
-  overflow: hidden;
 }
 
 /* Nav-bar */
-nav{
-  white-space: nowrap;
-}
 
-#nav-bar{
-  position:fixed !important;
-  margin-left:0px;
-  float:left;
-  overflow-y: scroll;
-  min-width:35%;
-  border-right:gray 3px solid;
+nav{
+  position:fixed;
+  margin:0;
+  padding:0;
+  top:0;
+  left: 0;
+  min-width:290px;
+  width:300px;
+  height: 100%;
+  /* float:left; */
+  overflow: auto;
+  border-right:rgba(0, 22, 22, 0.4) 3px solid;
 }
 
 #nav-bar h1{
@@ -54,37 +58,87 @@ nav{
   font-weight: 100;
 }
 
+#navbar ul {
+  height: 88%;
+  padding: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
 #nav-bar li{
   list-style-type: none;
   padding-left: 18px;
+  position: relative;
   border:0.5px solid;
-  width:
+  width:100%;
 }
 
 #nav-bar a{
   font-size: 1.1em;
   display: block;
   text-decoration: none;
-  padding:10px 13px;
+  padding:10px 30px;
+  curson:pointer;
+}
+
+#main-doc {
+  position: absolute;
+  margin-left: 310px;
+  padding: 20px;
+  margin-bottom: 110px;
 }
 
 /* Main Column */
 main{
-  float:right;
-  min-width:70%;
-  margin-left: 0;
-  padding-left: 0;
+  position: absolute;
+  margin-left: 310px;
+  padding: 20px;
+  margin-bottom: 110px;
 }
 
-main p{
-  margin-left: 20px;
+section article {
+  color: #4d4e53;
+  margin: 15px;
+  font-size: 0.96em;
+}
+
+section li {
+  margin: 15px 0px 0px 20px;
+}
+
+code {
+  display: block;
+  text-align: left;
+  white-space: pre-line;
+  position: relative;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 2;
+  background-color: #f7f7f7;
+  padding: 15px;
+  margin: 10px;
+  border-radius: 5px;
 }
 
 /* Media Queries */
-@media(max-width:768px){
-  main, nav{
-    float:none;
-    text-align: center;
+@media(max-width:700px){
+  nav{
     width:100%;
+    height: auto;
+    position: relative;
+  }
+
+  nav a{
+    float:left;
+  }
+  main{
+    margin-left:0;
+  }
+}
+
+@media(max-width:400px){
+  nav a{
+    text-align: center;
+    float: none;
   }
 }
